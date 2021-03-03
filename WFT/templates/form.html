@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2> Welcome to the Future</h2>
+<p>{{Creator}} was Creating Best User Data Form</p>
+
+<form action="" method="post">
+    <p>
+        {{form.username.label}}<br>
+        {{form.username(size=30)}}<br>
+    </p>
+    <p>
+        {{form.mobilenumber.label}}<br>
+        {{form.mobilenumber(size=30)}}<br>
+    </p>
+    <p>
+        {{form.email.label}}<br>
+        {{form.email(size=30)}}<br>
+    </p>
+    <p>
+        {{form.subject.label}}<br>
+        {{form.subject(size=30)}}<br>
+    </p>
+    <p>
+        {{form.gender.label}}<br>
+        {{form.gender(size=30)}}<br>
+    </p>
+    <p>{{form.submit()}}</p>
+</form>
+{% endblock %}
