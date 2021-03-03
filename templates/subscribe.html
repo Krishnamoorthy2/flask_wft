@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        
+        {% if error_statement %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ error_statement }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endif %}
+
+        <h1>Subscribe to Channel</h1>
+    <br/><br/>
+
+    <form action="/form" method="POST">
+        <div class="form-group">
+    
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" name='first_name' value="{{ first_name }}"><br/>
+    
+        </div>
+    
+        <div class="form-group">
+    
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name" name='last_name' value="{{ last_name }}"><br/>
+    
+        </div>
+    
+        <div class="form-group">
+    
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" name='email' value="{{ email}}"><br/>
+    
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="gender1" value="male" checked>
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="gender2" value="female" checked>
+              Female
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="gender3" value="any" checked>
+              Any
+            </label>
+          </div><br/>
+
+        <!-- <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+              <option value="3">Any</option>
+            </select>
+            <label for="floatingSelect">Gender</label>
+          </div><br/> -->
+
+           <div class="col-md-3">
+            <select class="form-select" id="subject" name="subject" required>
+              <option selected disabled value="">Choose Subject</option>
+              <option value="Tamil">Tamil</option>
+              <option value="Math">Maths</option>
+              <option value="Science">Science</option>
+            </select>
+          </div><br/>
+
+          <!-- <input type="text" id="UserMobile" maxlength="14" data-fv-numeric="true" data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN" required="required" data-fv-notempty-message="This field cannot be left blank." placeholder="Mobile No. " class="form-control" name="data[User][mobile]" data-fv-field="data[User][mobile]"> -->
+
+
+          <div class="col-md-3">
+            <!-- <input type="text" class="form-control" id="validationDefault05" required> -->
+            <input type="text" id="UserMobile" maxlength="12" data-fv-numeric="true" data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN" required="required" data-fv-notempty-message="This field cannot be left blank." placeholder="Mobile No. " class="form-control" name="phone_number">
+          </div><br/>
+
+    
+        <button type="submit" class="btn btn-secondary">Submit</button>
+        
+        </form>
+</div>
+
+{% endblock %}

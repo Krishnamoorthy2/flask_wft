@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+        </div>
+        <h1>Thanks for Subscribing.....</h1>
+        <small>Please Confirm your Information</small>
+        <br/><br/>
+        <ul>
+        {% for subscribers in subscribers %}
+            <li>{{ subscribers }}</li>
+            
+        {% endfor %}
+        </ul>
+        <br/><br/>
+
+        <!-- <ul>
+            {% for student in students %}
+                <a href="/form/{{ student.id }}" class="btn btn-outline-danger btn-sm">Delete</a>        
+            {% endfor %}
+            </ul>
+        <br/><br/>
+         -->
+        
+
+    </div>
+
+{% endblock %} 
