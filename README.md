@@ -21,4 +21,8 @@ following cmd
 
         1. set FLASK_APP=app.py (windows) or export FLASK_APP=app.py(ubuntu)
         2. flask run
+
+
+WFT Trial and Error with flask_wft
+
        
